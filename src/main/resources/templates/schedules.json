@@ -1,0 +1,35 @@
+{
+    "enabled": false,
+    "schedules": [
+        {
+            "type": "SYNC_JOB",
+            "schedule": "0/10 * 6-21 * * ?",
+            "enabled": true,
+            "params": [
+                "param1",
+                "param2",
+                "param3"
+            ]
+        },
+        {
+            "type": "ARCHIVE_JOB",
+            "schedule": "0/20 * 6-21 * * ?",
+            "enabled": false,
+            "params": [
+                "param1",
+                "param2"
+            ]
+        },
+        {
+            "type": "HOUSEKEEPING_JOB",
+            "schedule": "0/30 * 6-21 * * ?",
+            "enabled": false,
+            "params": [
+                "param1",
+                "param2",
+                "param3",
+                "param4"
+            ]
+        }
+    ]
+}
