@@ -5,6 +5,8 @@ import org.quartz.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
+
 public class SchedulerJob implements Job {
     private static final Logger log = LoggerFactory.getLogger(SchedulerJob.class);
 
@@ -24,15 +26,15 @@ public class SchedulerJob implements Job {
 
         switch (jobConfiguration.getType()) {
             case "SYNC_JOB": {
-                log.info("Reports synchronization job to be triggered with parameters: {}", jobConfiguration.getParams());
+                log.info("Reports synchronization job to be triggered with parameters: {}", Arrays.toString(jobConfiguration.getParams()));
                 break;
             }
             case "ARCHIVE_JOB": {
-                log.info("Reports archival job to be triggered with parameters: {}", jobConfiguration.getParams());
+                log.info("Reports archival job to be triggered with parameters: {}", Arrays.toString(jobConfiguration.getParams()));
                 break;
             }
             case "HOUSEKEEPING_JOB": {
-                log.info("Housekeeping job to be triggered with parameters: {}", jobConfiguration.getParams());
+                log.info("Housekeeping job to be triggered with parameters: {}", Arrays.toString(jobConfiguration.getParams()));
                 break;
             }
             default: {
